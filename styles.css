@@ -1,7 +1,7 @@
 body {
     font-family: Tahoma, Arial, sans-serif;
 
-    background-color: gray;
+    background-color: white;
     margin: 0;
 }
 
@@ -16,6 +16,8 @@ body {
     min-height: 500px;
     height: 100vh;
     max-height: 1080px;
+
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .7);
 }
 
 #intro {
