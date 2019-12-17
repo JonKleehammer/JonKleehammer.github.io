@@ -1,0 +1,35 @@
+body {
+    font-family: Tahoma, Arial, sans-serif;
+
+    background-color: gray;
+    margin: 0;
+}
+
+.ScreenTile {
+    margin: 0 auto 20px auto;
+    padding: 20px;
+
+    min-width: 500px;
+    width: 100vw;
+    max-width: 800px;
+
+    min-height: 500px;
+    height: 100vh;
+    max-height: 1080px;
+}
+
+#intro {
+    background-color: lightgray;
+}
+
+#about-me {
+    background-color: lightgreen;
+}
+
+#skills {
+    background-color: skyblue;
+}
+
+#projects {
+    background-color: lightcoral;
+}
