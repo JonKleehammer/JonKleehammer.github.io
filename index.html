@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
 </head>
 <body>
 <!--Intro-->
     <div class="ScreenTile" id="intro">
-        <h1>Hi, I'm Jon and I'm _________</h1>
+        <div id="intro-first">
+            <h1 id="intro-text">Hi, I'm Jon Kleehammer</h1>
+        </div>
+        <div id="intro-second">
+            <h1 id="static-text">    and I'm a </h1>
+            <h1 id="dynamic-text"
+                class="typewrite"
+                data-period="2000"
+                data-type='[ "software engineer.",
+                            "computer scientist."
+                            "designer.",
+                            "creative.",
+                            "web developer."]'>
+            </h1>
+            <h1 id="cursor">_</h1>
+        </div>
+
+
     </div>
 <!--About Me-->
     <div class="ScreenTile" id="about-me">

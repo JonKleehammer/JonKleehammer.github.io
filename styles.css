@@ -1,11 +1,12 @@
 body {
     font-family: Tahoma, Arial, sans-serif;
 
-    background-color: white;
+    background-color: #212124;
     margin: 0;
 }
 
 .ScreenTile {
+    display: flex;
     margin: 0 auto 20px auto;
     padding: 20px;
 
@@ -21,7 +22,47 @@ body {
 }
 
 #intro {
-    background-color: lightgray;
+    /*This screen tile will be a little bit different
+    We're gonna have a transparent background and no drop shadow
+    This is going to let the viewers see the background a lot better at first
+    and be more impacted by the greeting*/
+
+    color: white;
+
+    justify-content: center;
+
+    box-shadow: none;
+
+    flex-direction: column;
+}
+
+#intro-second {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+}
+
+#static-text {
+    align-self: flex-start;
+    white-space: pre;
+}
+
+#dynamic-text {
+
+}
+
+#cursor {
+    animation: blink 1.5s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent
+    }
+    50% {
+        color: white;
+    }
 }
 
 #about-me {
