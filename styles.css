@@ -23,6 +23,8 @@ body {
 
 
 .screen-tile {
+    margin-bottom: 100px
+;
     min-width: 500px;
     width: 100vw;
     max-width: 800px;
@@ -32,10 +34,10 @@ body {
     display: flex;
 }
 
-.screen-tile:first-child {
-    background-color: black;
-    margin-top: 0;
-}
+/*.screen-tile:first-child {*/
+/*    background-color: black;*/
+/*    margin-top: 0;*/
+/*}*/
 
 .screen-tile:last-child {
     margin-bottom: 0;
