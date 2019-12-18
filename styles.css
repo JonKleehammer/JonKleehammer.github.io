@@ -16,7 +16,6 @@ body {
 
     min-height: 500px;
     height: 100vh;
-    max-height: 1080px;
 
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .7);
 }
