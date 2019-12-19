@@ -13,8 +13,8 @@ let style_width = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -
 let dpi = window.devicePixelRatio;
 
 //scale the canvas
-canvas.setAttribute('height', style_height * dpi);
-canvas.setAttribute('width', style_width * dpi);
+canvas.setAttribute('height', style_height);
+canvas.setAttribute('width', style_width);
 
 //setting up particle array for storing particle data
 //TODO: Scale particle number with screen area
@@ -83,8 +83,8 @@ function Draw(){
     ctx.clearRect(0, 0, style_width, style_height);
 
 
-    for (var i = 0; i < particleNum; i++){
-        for (var j = 0; j < particleNum; j++){
+    for (let i = 0; i < particleNum; i++){
+        for (let j = 0; j < particleNum; j++){
             //we don't draw a line from a particle to itself
             if (i !== j){
                 ConnectParticles(particles[i], particles[j]);
@@ -93,7 +93,7 @@ function Draw(){
     }
 
     //drawing particles after the lines so the show up on top
-    for (var i = 0; i < particleNum; i++){
+    for (let i = 0; i < particleNum; i++){
         DrawParticle(particles[i]);
     }
 }
@@ -102,13 +102,21 @@ function MoveParticles(){
     for (var i = 0; i < particleNum; i++){
         //handling horizontal velocity
         particles[i].xpos += particles[i].xvel;
-        if (particles[i].xpos > style_width){
+        //if we go over the max width of the page
+        if (particles[i].xpos > style_width) {
             particles[i].xpos -= style_width;
+        }
+        //if we go under the min width of the page
+        else if (particles[i].xpos < 0) {
+            particles[i].xpos += style_width;
         }
 
         particles[i].ypos += particles[i].yvel;
-        if (particles[i].ypos > style_height){
+        if (particles[i].ypos > style_height) {
             particles[i].ypos -= style_height;
+        }
+        else if (particles[i].ypos < 0) {
+            particles[i].ypos += style_width;
         }
     }
 }
