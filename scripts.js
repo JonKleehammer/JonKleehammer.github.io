@@ -80,13 +80,25 @@ function SetupCanvas(){
     canvas.setAttribute('height', style_height * dpi);
     canvas.setAttribute('width', style_width * dpi);
 
-    ctx.fillStyle = "red";
+    ctx.fillStyle = "#777";
     for(var i = 0; i < 100; i++){
         var randX = style_width * Math.random();
         var randY = style_height * Math.random();
 
-        ctx.fillRect(randX, randY, 10, 10)
+        // ctx.fillRect(randX, randY, 10, 10);
+
+        ctx.beginPath();
+        ctx.arc(randX, randY, 5, 0, 2 * Math.PI, false);
+        ctx.fill();
     }
 }
+
+function UpdateCanvas(){
+
+}
+
+var Particle = function(x, y, velocity, direction) {
+
+};
 
 //endregion
