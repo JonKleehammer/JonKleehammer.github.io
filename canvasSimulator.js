@@ -17,6 +17,7 @@ canvas.setAttribute('height', style_height * dpi);
 canvas.setAttribute('width', style_width * dpi);
 
 //setting up particle array for storing particle data
+//TODO: Scale particle number with screen area
 particleNum = 100;
 particles = [];
 
@@ -64,6 +65,7 @@ function ConnectParticles (particleA, particleB){
     yDistance = particleA.ypos - particleB.ypos;
 
     distance = Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
+    //TODO: Account for connecting lines across screen boundaries
     if (distance < maxDistance){
         //distance percent controls the alpha value of the line color
         //the further they are the more faded the line is
