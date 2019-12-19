@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Jon Kleehammer</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    <script src="typewriter.js"></script>
 </head>
-<body onresize="SetupCanvas()">
-    <canvas id="background-canvas" height="200"></canvas>
+<body onresize="">
+    <canvas id="background-canvas"></canvas>
     <div id="tile-container">
         <!--Intro-->
         <div class="screen-tile" id="intro">
@@ -45,4 +45,6 @@
         </div>
     </div>
 </body>
+<!--This script requires the document to be parsed before executing-->
+<script src="canvasSimulator.js"></script>
 </html>
