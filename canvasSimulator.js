@@ -13,8 +13,8 @@ let style_width = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -
 let dpi = window.devicePixelRatio;
 
 //scale the canvas
-canvas.setAttribute('height', style_height * dpi);
-canvas.setAttribute('width', style_width * dpi);
+canvas.setAttribute('height', style_height * 0.5);
+canvas.setAttribute('width', style_width * 0.5);
 
 //setting up particle array for storing particle data
 //TODO: Scale particle number with screen area
