@@ -23,6 +23,10 @@ particles = [];
 //particle data
 maxSpeed = 0.15;
 
+//line data
+ctx.lineWidth = 1;
+maxDistance = 100;
+
 class Particle {
     xpos = style_width * Math.random();
     ypos = style_height * Math.random();
@@ -49,19 +53,51 @@ class Particle {
 
 function DrawParticle (patricle){
     ctx.beginPath();
-    ctx.arc(patricle.xpos, patricle.ypos, 1, 0, 2 * Math.PI, false);
+    ctx.arc(patricle.xpos, patricle.ypos, 2, 0, 2 * Math.PI, false);
     ctx.fillStyle = "#888";
     ctx.fill();
+}
+
+function ConnectParticles (particleA, particleB){
+    //using some good ol' pythagorean theorem
+    xDistance = particleA.xpos - particleB.xpos;
+    yDistance = particleA.ypos - particleB.ypos;
+
+    distance = Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
+    if (distance < maxDistance){
+        //distance percent controls the alpha value of the line color
+        //the further they are the more faded the line is
+        percent = 1 - (distance / maxDistance);
+        ctx.strokeStyle = `rgba(88, 88, 88, ${percent})`;
+
+        ctx.beginPath();
+        ctx.moveTo(particleA.xpos, particleA.ypos);
+        ctx.lineTo(particleB.xpos, particleB.ypos);
+        ctx.stroke();
+    }
 }
 
 function Draw(){
     ctx.clearRect(0, 0, style_width, style_height);
 
-    //drawing the particles in their current position
-    //then moving them
+
+    for (var i = 0; i < particleNum; i++){
+        for (var j = 0; j < particleNum; j++){
+            //we don't draw a line from a particle to itself
+            if (i !== j){
+                ConnectParticles(particles[i], particles[j]);
+            }
+        }
+    }
+
+    //drawing particles after the lines so the show up on top
     for (var i = 0; i < particleNum; i++){
         DrawParticle(particles[i]);
+    }
+}
 
+function MoveParticles(){
+    for (var i = 0; i < particleNum; i++){
         //handling horizontal velocity
         particles[i].xpos += particles[i].xvel;
         if (particles[i].xpos > style_width){
@@ -73,7 +109,6 @@ function Draw(){
             particles[i].ypos -= style_height;
         }
     }
-
 }
 
 window.requestAnimFrame = (function(){
@@ -93,5 +128,6 @@ window.requestAnimFrame = (function(){
 
 (function loop(){
     Draw();
+    MoveParticles();
     requestAnimFrame(loop);
 })();
