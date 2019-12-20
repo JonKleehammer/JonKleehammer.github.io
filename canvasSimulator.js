@@ -9,12 +9,14 @@ let style_height = +getComputedStyle(canvas).getPropertyValue("height").slice(0,
 //get CSS width
 let style_width = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
 
-//get DPI
-let dpi = window.devicePixelRatio;
-
 //scale the canvas
 canvas.setAttribute('height', style_height);
 canvas.setAttribute('width', style_width);
+
+//get DPI
+//we scale the size of the dots, the speed of the dots, and the number of dots to the DPI
+//TODO: Implement the above mentioned scaling
+let dpi = window.devicePixelRatio;
 
 //setting up particle array for storing particle data
 //TODO: Scale particle number with screen area
@@ -22,7 +24,7 @@ particleNum = 100;
 particles = [];
 
 //particle data
-maxSpeed = 0.15;
+maxSpeed = 0.2;
 
 //line data
 ctx.lineWidth = 1;
@@ -102,21 +104,25 @@ function MoveParticles(){
     for (var i = 0; i < particleNum; i++){
         //handling horizontal velocity
         particles[i].xpos += particles[i].xvel;
+
+        //the max distance, we allow it to go a little bit past the boundary
+        //because if it was transported immediately it might suddenly lose a connector line, which doesn't look good
+
         //if we go over the max width of the page
-        if (particles[i].xpos > style_width) {
-            particles[i].xpos -= style_width;
+        if (particles[i].xpos > style_width + maxDistance) {
+            particles[i].xpos -= style_width + maxDistance;
         }
         //if we go under the min width of the page
-        else if (particles[i].xpos < 0) {
-            particles[i].xpos += style_width;
+        else if (particles[i].xpos < -maxDistance) {
+            particles[i].xpos += style_width + maxDistance;
         }
 
         particles[i].ypos += particles[i].yvel;
-        if (particles[i].ypos > style_height) {
-            particles[i].ypos -= style_height;
+        if (particles[i].ypos > style_height + maxDistance) {
+            particles[i].ypos -= style_height + maxDistance;
         }
-        else if (particles[i].ypos < 0) {
-            particles[i].ypos += style_width;
+        else if (particles[i].ypos < -maxDistance ) {
+            particles[i].ypos += style_width + maxDistance;
         }
     }
 }
