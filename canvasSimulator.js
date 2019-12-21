@@ -110,19 +110,20 @@ function MoveParticles(){
 
         //if we go over the max width of the page
         if (particles[i].xpos > style_width + maxDistance) {
-            particles[i].xpos -= style_width + maxDistance;
+            particles[i].xpos -= style_width + maxDistance * 2;
         }
         //if we go under the min width of the page
         else if (particles[i].xpos < -maxDistance) {
-            particles[i].xpos += style_width + maxDistance;
+            particles[i].xpos += style_width + maxDistance * 2;
         }
 
+        //handling vertical velocity
         particles[i].ypos += particles[i].yvel;
         if (particles[i].ypos > style_height + maxDistance) {
-            particles[i].ypos -= style_height + maxDistance;
+            particles[i].ypos -= style_height + maxDistance * 2;
         }
         else if (particles[i].ypos < -maxDistance ) {
-            particles[i].ypos += style_width + maxDistance;
+            particles[i].ypos += style_height + maxDistance * 2;
         }
     }
 }
