@@ -20,6 +20,7 @@ let dpi = window.devicePixelRatio;
 
 //setting up particle array for storing particle data
 //TODO: Scale particle number with screen area
+screenArea = (style_width * style_height) / dpi;
 particleNum = 100;
 particles = [];
 
