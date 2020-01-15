@@ -9,6 +9,15 @@ body {
 
 }
 
+h1 {
+    margin: 0;
+    height: 100%;
+}
+
+div {
+    height: 100%;
+}
+
 #background-canvas {
     /*background-color: rgba(0, 0, 255, 0.3);*/
 
@@ -25,10 +34,7 @@ body {
     align-items: center;
 }
 
-
-.screen-tile {
-    margin-bottom: 100px
-;
+.empty-tile {
     min-width: 500px;
     width: 100vw;
     max-width: 800px;
@@ -36,6 +42,17 @@ body {
     min-height: 100vh;
 
     display: flex;
+}
+
+.screen-tile {
+    min-width: 500px;
+    width: 100vw;
+    max-width: 800px;
+
+    min-height: 100vh;
+
+    display: flex;
+    padding: 70px;
 }
 
 /*.screen-tile:first-child {*/
@@ -95,7 +112,30 @@ body {
 }
 
 #skills {
+    display: flex;
     background-color: skyblue;
+    flex-direction: column;
+}
+
+#skill-table {
+    align-self: center;
+    width: 500px;
+    height: 500px;
+    background-color: #666;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    list-style: none;
+    padding: 0;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 50px;
+    vertical-align: middle;
+    margin: auto;
 }
 
 #projects {
