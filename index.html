@@ -5,6 +5,8 @@
     <title>Jon Kleehammer</title>
     <link rel="stylesheet" href="styles.css">
     <script src="typewriter.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 </head>
 <body onresize="">
     <canvas id="background-canvas"></canvas>
@@ -34,14 +36,14 @@
 <!--            <h1>About Me</h1>-->
 <!--        </div>-->
         <!--Skills/Enjoyment Section-->
-        <div class="screen-tile" id="skills">
+        <div class="screen-tile" id="skills" data-aos="fade-left">
                 <h1>Skills</h1>
                 <ul id="skill-table">
-                    <li class="skill-bar" style="background-color: blue">c#</li>
-                    <li class="skill-bar" style="background-color: red">c++</li>
-                    <li class="skill-bar" style="background-color: green">python</li>
-                    <li class="skill-bar" style="background-color: cyan">c</li>
-                    <li class="skill-bar" style="background-color: beige">assembly</li>
+                    <li class="skill-bar" style="width: 98%">c#</li>
+                    <li class="skill-bar" style="width: 94%">c++</li>
+                    <li class="skill-bar" style="width: 88%">python</li>
+                    <li class="skill-bar" style="width: 85%">c</li>
+                    <li class="skill-bar" style="width: 80%">assembly</li>
                 </ul>
         </div>
 <!--        Projects-->
@@ -56,4 +58,5 @@
 </body>
 <!--This script requires the document to be parsed before executing-->
 <script src="canvasSimulator.js"></script>
+<script>AOS.init();</script>
 </html>
