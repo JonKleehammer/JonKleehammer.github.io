@@ -18,6 +18,10 @@ div {
     height: 100%;
 }
 
+span {
+    margin: 10px;
+}
+
 #background-canvas {
     /*background-color: rgba(0, 0, 255, 0.3);*/
 
@@ -121,12 +125,13 @@ div {
     align-self: center;
     width: 500px;
     height: auto;
-    background-color: #666;
 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 
+    background-color: #EEF;
+    border-radius: 5px;
     list-style: none;
 }
 
@@ -136,6 +141,9 @@ div {
     border-radius: 5px;
 
     background: linear-gradient(to left, #adf, #aaf);
+
+    display: flex;
+    align-items: center;
 }
 
 #projects {
