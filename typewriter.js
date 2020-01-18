@@ -5,6 +5,7 @@ window.onload = function() {
 function SetupTypewriters() {
     var elements = document.getElementsByClassName('typewrite');
     for (var i=0; i<elements.length; i++) {
+        elements[i].style.whiteSpace = "nowrap";
         var toRotate = elements[i].getAttribute('data-type');
         var period = elements[i].getAttribute('data-period');
         if (toRotate) {

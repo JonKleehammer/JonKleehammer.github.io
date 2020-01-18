@@ -5,12 +5,19 @@
     <title>Jon Kleehammer</title>
     <link rel="stylesheet" href="styles.css">
     <script src="typewriter.js"></script>
+
+<!--    External Resources-->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body onresize="">
     <canvas id="background-canvas"></canvas>
     <div id="tile-container">
         <!--Intro-->
-        <div class="screen-tile" id="intro">
+        <div class="empty-tile" id="intro">
             <div id="intro-first">
                 <h1 id="intro-text">Hi, I'm Jon Kleehammer</h1>
             </div>
@@ -19,34 +26,159 @@
                 <h1 id="dynamic-text"
                     class="typewrite"
                     data-period="2000"
-                    data-type='[ "UI/UX design",
-                            "making beautiful websites",
-                            "game design",
-                            "art",
-                            "efficiency"]'>
+                    data-type='["UI/UX design",
+                                "making beautiful websites",
+                                "game design",
+                                "data visualization",
+                                "art",
+                                "efficiency"]'
+                    style="margin-left: 0">
                 </h1>
                 <h1 id="cursor">_</h1>
             </div>
         </div>
 
         <!--About Me-->
-<!--        <div class="screen-tile" id="about-me">-->
-<!--            <h1>About Me</h1>-->
-<!--        </div>-->
-        <!--Skills/Enjoyment Section-->
-<!--        <div class="screen-tile" id="skills">-->
-<!--                <h1>Skills</h1>-->
-<!--        </div>-->
-        <!--Projects-->
-<!--        <div class="screen-tile" id="projects">-->
+        <div class="tile" id="about-me">
+            <h1>About Me</h1>
+            <p class="big-p"> Hi everyone!
+                <br> My name is Jon Kleehammer and I'm a senior at UNT graduating Spring 2020!
+                <br> I have so many passions, but my greatest include:
+            </p>
+
+            <p>
+                <u> Data Gathering and Visualization! </u>
+                <br>
+                There's something super satisfying about utilizing the huge amount of data in the world and drawing
+                conclusions based on charts and graphs that tell a story. Although I don't have many projects that explore this,
+                it is my ultimate goal to use these skills in industry as a data scientist in the next 3-5 years.
+            </p>
+
+            <p>
+                <u>Game Design and Development</u>
+                <br>
+                In my free time I'm an avid dungeon master for Dungeons and Dragons and game designer using Unity3D.
+                <br>
+                I see game development as a form of self-expression that I do for fun! I don't see myself doing it as a career,
+                but I really enjoy doing it for myself!
+            </p>
+
+            <p>
+                <u>UI/UX Design</u>
+                <br>
+                Lastly I love designing user interfaces! I am passionate about creating beautiful websites that are
+                easy to use and look awesome.
+                <br>
+                When I first got to college I was a fine arts major, but I didn't find the work as fulfilling as computer science.
+                After graduating I may get another bachelor's degree in fine arts or graphic design partly for my own enjoyment
+                and partly for improving my skills with making beautiful and functional designs!
+            </p>
+
+        </div>
+<!--        Skills/Enjoyment Section-->
+        <div class="tile" id="skills">
+            <h1>Skills</h1>
+            <h2>Languages</h2>
+            <ul class="skill-table">
+
+                <li class="skill-bar" data-aos="grow" style="--bar-width: 98%;">
+                    <span class="skill-bar-title" data-aos="fade-right">C#</span>
+                </li>
+
+                <li class="skill-bar" data-aos="grow" style="--bar-width: 90%;">
+                    <span class="skill-bar-title" data-aos="fade-right">C++</span>
+                </li>
+
+                <li class="skill-bar" data-aos="grow" style="--bar-width: 80%;">
+                    <span class="skill-bar-title" data-aos="fade-right">C</span>
+                </li>
+
+                <li class="skill-bar" data-aos="grow" style="--bar-width: 92%;">
+                    <span class="skill-bar-title" data-aos="fade-right">Python</span>
+                </li>
+
+                <li class="skill-bar" data-aos="grow" style="--bar-width: 77%;">
+                    <span class="skill-bar-title" data-aos="fade-right">SQL</span>
+                </li>
+
+                <li class="skill-bar" data-aos="grow" style="--bar-width: 54%;">
+                    <span class="skill-bar-title" data-aos="fade-right">Assembly</span>
+                </li>
+            </ul>
+            <h2>Frameworks</h2>
+            <ul class="skill-table">
+                <li class="skill-bar" data-aos="grow" style="--bar-width: 65%;">
+                    <span class="skill-bar-title" data-aos="fade-right">ReactJS</span>
+                </li>
+                <li class="skill-bar" data-aos="grow" style="--bar-width: 57%;">
+                    <span class="skill-bar-title" data-aos="fade-right">Django</span>
+                </li>
+            </ul>
+
+            <h2>Productivity</h2>
+            <ul class="skill-table">
+                <li class="skill-bar" data-aos="grow" style="--bar-width: 91%;">
+                    <span class="skill-bar-title" data-aos="fade-right">Microsoft Office</span>
+                </li>
+                <li class="skill-bar" data-aos="grow" style="--bar-width: 84%;">
+                    <span class="skill-bar-title" data-aos="fade-right">GitHub</span>
+                </li>
+                <li class="skill-bar" data-aos="grow" style="--bar-width: 76%;">
+                    <span class="skill-bar-title" data-aos="fade-right">Trello</span>
+                </li>
+            </ul>
+        </div>
+<!--        Projects-->
+<!--        <div class="tile" id="projects">-->
 <!--            <h1>Projects</h1>-->
 <!--        </div>-->
-        <!--Contact Me!-->
-<!--        <div class="screen-tile" id="contact">-->
-<!--            <h1>Contact Me</h1>-->
-<!--        </div>-->
+<!--        Contact Me!-->
+        <div class="tile" id="contact">
+            <h1>Contact Me!</h1>
+            <p>Thank you for visiting my website!</p>
+
+            <p>
+                I'm currently still working on this website, so I apologize for not being able to provide you with the
+                full experience yet! I'm still far away from being happy with the website, but I thought I'd offer a
+                sneak peak at my work in progress! Check in at a future time to see my updates!
+            </p>
+
+            <p>
+                You can also contact me with any questions, comments, and concerns about me or the website using the
+                contact information below.
+            </p>
+
+            <ul>
+                <li><div class="contact-wrapper">
+                    <a target="_blank" href="https://www.linkedin.com/in/jonathan-kleehammer-225725149/">
+                        <button class="contact-button"><i class="fa fa-linkedin"></i></button>
+                    </a>
+                    <h2 class="contact-info">Jonathan Kleehammer</h2>
+                </div></li>
+
+                <li><div class="contact-wrapper">
+                    <a target="_blank" href="mailto:jon.kleehammer@gmail.com">
+                        <button class="contact-button"><i class="fa fa-envelope"></i></button>
+                    </a>
+                    <h2 class="contact-info">Jon.Kleehammer@gmail.com</h2>
+                </div></li>
+
+                <li><div class="contact-wrapper">
+                    <a target="_blank" href="https://github.com/JonKleehammer/">
+                        <button class="contact-button"><i class="fa fa-github"></i></button>
+                    </a>
+                    <h2 class="contact-info">JonKleehammer</h2>
+                </div></li>
+
+                <li><div class="contact-wrapper">
+                    <button class="contact-button"><i class="fa fa-phone"></i></button>
+                    <h2 class="contact-info">(682) 558-2655</h2>
+                </div></li>
+            </ul>
+        </div>
     </div>
 </body>
-<!--This script requires the document to be parsed before executing-->
+<!--These scripts requires the document to be parsed before executing-->
 <script src="canvasSimulator.js"></script>
+<script>AOS.init();</script>
 </html>

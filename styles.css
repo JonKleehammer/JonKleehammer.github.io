@@ -9,6 +9,48 @@ body {
 
 }
 
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+div {
+    height: 100%;
+}
+
+span {
+    margin: 0;
+}
+
+ul {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+button {
+    color: white;
+}
+
+button:focus {
+    outline: none;
+}
+
+.big-p {
+    font-size: 15pt;
+}
+
+[data-aos="grow"]{
+    width: 0;
+    transition-property: width;
+}
+
+[data-aos="grow"].aos-animate {
+    width: var(--bar-width, 100%);
+}
+
 #background-canvas {
     /*background-color: rgba(0, 0, 255, 0.3);*/
 
@@ -25,10 +67,7 @@ body {
     align-items: center;
 }
 
-
-.screen-tile {
-    margin-bottom: 100px
-;
+.empty-tile {
     min-width: 500px;
     width: 100vw;
     max-width: 800px;
@@ -38,13 +77,17 @@ body {
     display: flex;
 }
 
-/*.screen-tile:first-child {*/
-/*    background-color: black;*/
-/*    margin-top: 0;*/
-/*}*/
+.tile {
+    min-width: 500px;
+    width: 100vw;
+    max-width: 800px;
 
-.screen-tile:last-child {
-    margin-bottom: 0;
+    padding: 70px;
+}
+
+
+.tile + .tile {
+    margin-top: 50px;
 }
 
 #intro {
@@ -95,7 +138,47 @@ body {
 }
 
 #skills {
+    display: flex;
+    flex-direction: column;
+
     background-color: skyblue;
+}
+
+.skill-table {
+    align-self: center;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    background-color: #EEF;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.skill-bar {
+    height: 50px;
+    border-radius: 5px;
+
+    background: linear-gradient(to left, #8EA, #3AF);
+
+    display: flex;
+    align-items: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+    color: white;
+}
+
+.skill-bar + .skill-bar {
+    margin-top: 10px;
+}
+
+.skill-bar-title {
+    margin-left: 10px;
 }
 
 #projects {
@@ -103,5 +186,28 @@ body {
 }
 
 #contact {
+    display: flex;
+    flex-direction: column;
+
     background-color: lightpink;
+}
+
+.contact-wrapper {
+    vertical-align: middle;
+    
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contact-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+
+    background-color: red;
+    font-size: 25px;
+}
+
+.contact-info {
+    margin: auto 0 auto 20px;
 }
