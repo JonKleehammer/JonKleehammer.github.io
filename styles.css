@@ -83,6 +83,8 @@ button:focus {
     max-width: 800px;
 
     padding: 70px;
+
+    background-color: #c9bcff;
 }
 
 
@@ -134,20 +136,16 @@ button:focus {
 }
 
 #about-me {
-    background-color: lightgreen;
 }
 
 #skills {
     display: flex;
     flex-direction: column;
-
-    background-color: skyblue;
 }
 
 .skill-table {
     align-self: center;
     width: 100%;
-    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -159,10 +157,9 @@ button:focus {
 }
 
 .skill-bar {
-    height: 50px;
     border-radius: 5px;
 
-    background: linear-gradient(to left, #8EA, #3AF);
+    background: linear-gradient(to right, #7978ff, #9faaee);
 
     display: flex;
     align-items: center;
@@ -174,22 +171,17 @@ button:focus {
 }
 
 .skill-bar + .skill-bar {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .skill-bar-title {
-    margin-left: 10px;
+    margin: 15px;
 }
 
 #projects {
-    background-color: lightcoral;
 }
 
 #contact {
-    display: flex;
-    flex-direction: column;
-
-    background-color: lightpink;
 }
 
 .contact-wrapper {
