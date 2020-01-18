@@ -48,7 +48,7 @@ button:focus {
 }
 
 [data-aos="grow"].aos-animate {
-    width : 100%;
+    width: var(--bar-width, 100%);
 }
 
 #background-canvas {
