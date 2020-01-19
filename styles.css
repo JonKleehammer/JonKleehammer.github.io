@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    color: #104;
+    color: #130d1f;
 }
 
 h1 {
@@ -232,7 +232,7 @@ button:focus {
     height: 50px;
     border-radius: 100%;
 
-    background-color: red;
+    background-color: #6a4dff;
     font-size: 25px;
 }
 
