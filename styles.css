@@ -91,6 +91,18 @@ button:focus {
     align-items: center;
 }
 
+.section-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.accent-line {
+    width: 150px;
+    height: 4px;
+    background-color: white;
+}
+
 .empty-tile {
     min-width: 500px;
     width: 100vw;
@@ -201,6 +213,8 @@ button:focus {
     overflow: hidden;
 
     color: white;
+
+    transition: all;
 }
 
 .skill-bar + .skill-bar {
@@ -209,6 +223,10 @@ button:focus {
 
 .skill-bar-title {
     margin: 15px;
+}
+
+.skill-bar:hover {
+    background: linear-gradient(to right, #7a90ff, #9fb8ed);
 }
 
 #projects {
@@ -228,11 +246,13 @@ button:focus {
     width: 100px;
     height: 100px;
     position: relative;
+}
 
+.zoom {
     transition: transform 0.1s ease-in-out;
 }
 
-.contact-button:hover {
+.zoom:hover {
     transform: scale(1.1);
 }
 
