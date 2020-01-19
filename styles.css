@@ -212,11 +212,19 @@ button:focus {
 #contact {
 }
 
+.contact-list {
+    margin: 10px 150px;
+}
+
 .contact-wrapper {
     vertical-align: middle;
     
     display: flex;
     justify-content: flex-start;
+}
+
+.contact-wrapper + .contact-wrapper {
+    margin-top: 10px;
 }
 
 .contact-button {
