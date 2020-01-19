@@ -11,11 +11,12 @@ body {
 }
 
 h1 {
-    margin: 0;
+    color: white;
+    margin: 10px;
 }
 
 h2 {
-    margin-top: 20px;
+    margin: 10px 0;
 }
 
 h3 {
@@ -45,16 +46,16 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 button {
     color: white;
 }
 
 button:focus {
     outline: none;
-}
-
-.big-p {
-    font-size: 15pt;
 }
 
 [data-aos="grow-horizontal"] {
@@ -98,6 +99,8 @@ button:focus {
     min-height: 100vh;
 
     display: flex;
+
+    margin-bottom: 100px;
 }
 
 .tile {
@@ -106,13 +109,9 @@ button:focus {
     max-width: 800px;
 
     padding: 70px;
+    margin-bottom: 50px;
 
     background-color: #c9bcff;
-}
-
-
-.tile + .tile {
-    margin-top: 50px;
 }
 
 .tile-content {
@@ -132,6 +131,8 @@ button:focus {
     max-width: 75vw;
 
     color: white;
+
+    padding: 0;
 }
 
 #intro-second {
@@ -184,6 +185,10 @@ button:focus {
     padding: 20px;
 }
 
+.skill-table + .skill-table {
+    margin-top: 30px;
+}
+
 .skill-bar {
     border-radius: 5px;
 
@@ -213,29 +218,43 @@ button:focus {
 }
 
 .contact-list {
-    margin: 30px 150px 0 150px;
-}
-
-.contact-wrapper {
-    vertical-align: middle;
-    
     display: flex;
-    justify-content: flex-start;
-}
-
-.contact-wrapper + .contact-wrapper {
-    margin-top: 10px;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .contact-button {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    position: relative;
 
-    background-color: #6a4dff;
-    font-size: 25px;
+    transition: transform 0.1s ease-in-out;
 }
 
-.contact-info {
-    margin: auto 0 auto 20px;
+.contact-button:hover {
+    transform: scale(1.1);
+}
+
+.contact-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#twitter-button {
+    color: white;
+    background-color: #1DA1F2;
+}
+
+#linkedin-button {
+    color: white;
+    background-color: #2867B2;
+}
+
+#github-button {
+    color: white;
+    background-color: #24292e;
 }
