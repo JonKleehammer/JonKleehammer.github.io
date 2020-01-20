@@ -1,5 +1,5 @@
 body {
-    font-family: Tahoma, Arial, sans-serif;
+    font-family: Montserrat,Tahoma, Arial, sans-serif;
 
     background-color: #212124;
     margin: 0;
@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    color: #130d1f;
+    color: #240c2f;
 }
 
 h1 {
@@ -67,14 +67,6 @@ button:focus {
     width: var(--bar-width, 100%);
 }
 
-[data-aos="grow-vertical"] {
-    flex: 0;
-    transition-property: height;
-}
-
-[data-aos="grow-vertical"].aos-animate {
-    flex: 1;
-}
 #background-canvas {
     /*background-color: rgba(0, 0, 255, 0.3);*/
 
@@ -104,9 +96,7 @@ button:focus {
 }
 
 .empty-tile {
-    min-width: 500px;
-    width: 100vw;
-    max-width: 800px;
+    width: 90vw;
 
     min-height: 100vh;
 
@@ -181,7 +171,21 @@ button:focus {
 
 #skills {
     display: flex;
+    flex-direction: row;
+}
+
+.half {
+    flex-basis: 50%;
+    padding: 20px;
+
+    display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#personal-pic {
+    border-radius: 100%;
 }
 
 .skill-table {
@@ -222,7 +226,8 @@ button:focus {
 }
 
 .skill-bar-title {
-    margin: 15px;
+    margin: 5px;
+    font-size: 12pt;
 }
 
 .skill-bar:hover {
