@@ -172,16 +172,21 @@ button:focus {
 #skills {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .half {
-    flex-basis: 50%;
+    min-width: 400px;
+    flex-basis: 40%;
     padding: 20px;
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
+    text-align: center;
+
+    align-self: center;
 }
 
 #personal-pic {
