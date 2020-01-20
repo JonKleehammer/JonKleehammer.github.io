@@ -1,5 +1,5 @@
 body {
-    font-family: Tahoma, Arial, sans-serif;
+    font-family: Montserrat,Tahoma, Arial, sans-serif;
 
     background-color: #212124;
     margin: 0;
@@ -7,15 +7,31 @@ body {
     display: flex;
     flex-direction: column;
 
+    color: #240c2f;
 }
 
 h1 {
-    margin: 0;
+    color: white;
+    margin: 10px;
 }
 
 h2 {
-    margin: 0;
+    margin: 10px 0;
 }
+
+h3 {
+    font-weight: normal;
+}
+
+h4 {
+    font-weight: normal;
+}
+
+p {
+    margin: 20px auto;
+    width: 90%;
+}
+
 div {
     height: 100%;
 }
@@ -30,6 +46,10 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 button {
     color: white;
 }
@@ -38,16 +58,12 @@ button:focus {
     outline: none;
 }
 
-.big-p {
-    font-size: 15pt;
-}
-
-[data-aos="grow"]{
+[data-aos="grow-horizontal"] {
     width: 0;
     transition-property: width;
 }
 
-[data-aos="grow"].aos-animate {
+[data-aos="grow-horizontal"].aos-animate {
     width: var(--bar-width, 100%);
 }
 
@@ -67,14 +83,26 @@ button:focus {
     align-items: center;
 }
 
+.section-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.accent-line {
+    width: 150px;
+    height: 4px;
+    background-color: white;
+}
+
 .empty-tile {
-    min-width: 500px;
-    width: 100vw;
-    max-width: 800px;
+    width: 90vw;
 
     min-height: 100vh;
 
     display: flex;
+
+    margin-bottom: 100px;
 }
 
 .tile {
@@ -83,11 +111,14 @@ button:focus {
     max-width: 800px;
 
     padding: 70px;
+    margin-bottom: 50px;
+
+    background-color: #c9bcff;
 }
 
-
-.tile + .tile {
-    margin-top: 50px;
+.tile-content {
+    margin: 0 auto;
+    width: 90%;
 }
 
 #intro {
@@ -102,6 +133,8 @@ button:focus {
     max-width: 75vw;
 
     color: white;
+
+    padding: 0;
 }
 
 #intro-second {
@@ -134,20 +167,30 @@ button:focus {
 }
 
 #about-me {
-    background-color: lightgreen;
 }
 
 #skills {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
 
-    background-color: skyblue;
+.half {
+    flex-basis: 50%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#personal-pic {
+    border-radius: 100%;
 }
 
 .skill-table {
     align-self: center;
     width: 100%;
-    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -158,11 +201,14 @@ button:focus {
     padding: 20px;
 }
 
+.skill-table + .skill-table {
+    margin-top: 30px;
+}
+
 .skill-bar {
-    height: 50px;
     border-radius: 5px;
 
-    background: linear-gradient(to left, #8EA, #3AF);
+    background: linear-gradient(to right, #7978ff, #9faaee);
 
     display: flex;
     align-items: center;
@@ -171,43 +217,69 @@ button:focus {
     overflow: hidden;
 
     color: white;
+
+    transition: all;
 }
 
 .skill-bar + .skill-bar {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .skill-bar-title {
-    margin-left: 10px;
+    margin: 5px;
+    font-size: 12pt;
+}
+
+.skill-bar:hover {
+    background: linear-gradient(to right, #7a90ff, #9fb8ed);
 }
 
 #projects {
-    background-color: lightcoral;
 }
 
 #contact {
-    display: flex;
-    flex-direction: column;
-
-    background-color: lightpink;
 }
 
-.contact-wrapper {
-    vertical-align: middle;
-    
+.contact-list {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .contact-button {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-
-    background-color: red;
-    font-size: 25px;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    position: relative;
 }
 
-.contact-info {
-    margin: auto 0 auto 20px;
+.zoom {
+    transition: transform 0.1s ease-in-out;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+.contact-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#twitter-button {
+    color: white;
+    background-color: #1DA1F2;
+}
+
+#linkedin-button {
+    color: white;
+    background-color: #2867B2;
+}
+
+#github-button {
+    color: white;
+    background-color: #24292e;
 }
