@@ -2,25 +2,6 @@
 var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext('2d');
 
-//get CSS height
-//the + prefix casts it to an integer
-//the slice method gets rid of "px"
-let style_height = +getComputedStyle(canvas).getPropertyValue("height").slice(0, -2);
-//get CSS width
-let style_width = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
-
-//scale the canvas
-canvas.setAttribute('height', style_height);
-canvas.setAttribute('width', style_width);
-
-//get DPI
-//we scale the size of the dots, the speed of the dots, and the number of dots to the DPI
-//TODO: Implement the above mentioned scaling
-let dpi = window.devicePixelRatio;
-
-//setting up particle array for storing particle data
-//TODO: Scale particle number with screen area
-screenArea = (style_width * style_height) / dpi;
 particleNum = 100;
 particles = [];
 
@@ -31,11 +12,51 @@ maxSpeed = 0.2;
 ctx.lineWidth = 1;
 maxDistance = 100;
 
+//get CSS height
+//the + prefix casts it to an integer
+//the slice method gets rid of "px"
+let style_height = +getComputedStyle(canvas).getPropertyValue("height").slice(0, -2);
+//get CSS width
+let style_width = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
+
+SetupCanvas();
+
+// We have a function for this because everytime the window is resized
+// We have to re-setup the canvas. Otherwise the canvas would look stretched or squished
+function SetupCanvas () {
+    style_height = +getComputedStyle(canvas).getPropertyValue("height").slice(0, -2);
+    style_width = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
+
+    //scale the canvas
+    canvas.setAttribute('height', style_height);
+    canvas.setAttribute('width', style_width);
+
+    //get DPI
+    //we scale the size of the dots, the speed of the dots, and the number of dots to the DPI
+    //TODO: Implement the above mentioned scaling
+    let dpi = window.devicePixelRatio;
+
+    //setting up particle array for storing particle data
+    screenArea = (style_width * style_height) / dpi;
+    particleNum = Math.floor(screenArea / 2000);
+}
+
+// When we extend or shrink the canvas we need to redo the particles rather than keeping them
+// where they are. For instance, when extending the canvas the new area created by the extension would have 0 particles
+function RedoParticles (){
+    //For now we will simply erase all the old particles and create new ones
+    particles.length = 0;
+    for(var i = 0; i < particleNum; i++){
+        particles.push(new Particle());
+    }
+}
+
 class Particle {
+    //initial position is random
     xpos = style_width * Math.random();
     ypos = style_height * Math.random();
 
-    //TODO: Allow for random speeds
+    //inital speed is random
     xvel = this.RandomSpeed();
     yvel = this.RandomSpeed();
 
