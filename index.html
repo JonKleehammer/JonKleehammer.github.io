@@ -15,10 +15,10 @@
 
 <body onresize="SetupCanvas(), RedoParticles()">
     <canvas id="background-canvas"></canvas>
-    <div id="tile-container">
+    <div id="page-wrapper">
         <!--Intro-->
         <span id="intro">
-            <h1 id="greetings" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="0">
+            <h1 id="greetings" data-aos="fade-in" data-aos-duration="1000">
                 Hi, I'm Jon Kleehammer
             </h1>
 
@@ -39,28 +39,19 @@
                 </span>
             </span>
         </span>
-
-        <!--About Me-->
-
-<!--        Skills/Enjoyment Section-->
-
-<!--        TODO: Optimize this format at a future time-->
-        <div class="section-title">
-            <div class="accent-line"></div>
-            <h1>Who am I?</h1>
-            <div class="accent-line"></div>
-        </div>
-
-        <div id="skills">
-                <div class="half">
+<!-- About Me -> Titled: Who am I? -->
+        <div id="about-me">
+            <div id="about-me-background"></div>
+            <span class="section-title"><h1 id="about-me-title">Who am I?</h1></span>
+            <div id="about-me-content">
+                <div id="about-me-left">
                     <img id="personal-pic" src="https://pbs.twimg.com/profile_images/780989542425853952/aIaWqQ-s_400x400.jpg"
                          data-aos="fade-right" data-aos-duration="1000">
                     <h1 data-aos="fade-right" data-aos-duration="1000">
                         I love data visualization, UI/UX design, and game design
                     </h1>
-
-                </div>
-                <div class="half">
+            </div>
+                <div id="about-me-right">
                     <div class="skill-table" data-aos="fade-left" data-aos-duration="1000">
                         <h2>Languages</h2>
                         <div class="skill-bar" data-aos="grow-horizontal" data-aos-duration="2000" style="--bar-width: 98%;">
@@ -108,16 +99,16 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
         </div>
 
 <!--        Contact Me!-->
-        <div class="section-title">
-            <div class="accent-line"></div>
-            <h1>Contact Info</h1>
-            <div class="accent-line"></div>
-        </div>
-        <div class="tile" id="contact">
-            <div class="tile-content">
+        <div id="contact">
+
+            <span class="section-title"><h1 id="contact-title">Contact Me</h1></span>
+
+            <div class="content-wrapper">
                 <h2>Thank you for visiting my website!</h2>
 
                 <p>

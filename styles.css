@@ -1,5 +1,6 @@
- body {
-    font-family: Montserrat,Tahoma, Arial, sans-serif;
+/*region HTML Elements */
+body {
+    font-family: Tahoma, Arial, sans-serif;
 
      margin: 0;
 
@@ -58,7 +59,9 @@ button {
 button:focus {
     outline: none;
 }
+/*endregion */
 
+/*region Animations*/
 [data-aos="grow-horizontal"] {
     width: 0;
     transition-property: width;
@@ -68,51 +71,44 @@ button:focus {
     width: var(--bar-width, 100%);
 }
 
-#background-canvas {
-    /*background-color: rgba(0, 0, 255, 0.3);*/
+ .zoom {
+     transition: transform 0.1s ease-in-out;
+ }
 
+ .zoom:hover {
+     transform: scale(1.1);
+ }
+/*endregion*/
+
+/*region Entire Page*/
+#background-canvas {
     width: 100vw;
     height: 100vh;
 
-    z-index: -1000;
     position: fixed;
+    z-index: -1000;
 }
 
-#tile-container {
+#page-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .section-title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    white-space: nowrap;
+    font-family: Kefa, Tahoma;
+    text-align: center;
+    font-size: 36pt;
 }
 
-.accent-line {
-    width: 150px;
-    height: 4px;
-    background-color: white;
-}
-
-.tile {
-    min-width: 500px;
-    width: 100vw;
-    max-width: 800px;
-
-    padding: 70px;
-    margin-bottom: 50px;
-
-    background-color: #c9bcff;
-}
-
-.tile-content {
+.content-wrapper {
     margin: 0 auto;
-    width: 90%;
+    max-width: 960px;
 }
 
+/*endregion*/
+
+/*region Intro*/
 #intro {
     width: 100vw;
     height: 100vh;
@@ -164,26 +160,41 @@ button:focus {
 }
 
 #about-me {
+    width: 100vw;
+    padding: 50px;
+
 }
 
-#skills {
+/*endregion*/
+
+/*region About Me*/
+#about-me-background{
+
+}
+
+#about-me-title {
+    text-align: center;
+    width: auto;
+    background: radial-gradient(circle at bottom, lightseagreen, midnightblue);
+}
+
+#about-me-content {
+    padding: 50px;
+
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-.half {
-    min-width: 400px;
-    flex-basis: 40%;
-    padding: 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#about-me-left {
+    margin: 50px;
+    width: 400px;
     text-align: center;
+}
 
-    align-self: center;
+#about-me-right {
+    margin: 50px;
+    width: 400px;
 }
 
 #personal-pic {
@@ -235,11 +246,12 @@ button:focus {
 .skill-bar:hover {
     background: linear-gradient(to right, #7a90ff, #9fb8ed);
 }
+/*endregion*/
 
-#projects {
-}
-
+/*region Contact*/
 #contact {
+    width: 100vw;
+    background: radial-gradient(circle at bottom, lightseagreen, midnightblue);
 }
 
 .contact-list {
@@ -255,13 +267,6 @@ button:focus {
     position: relative;
 }
 
-.zoom {
-    transition: transform 0.1s ease-in-out;
-}
-
-.zoom:hover {
-    transform: scale(1.1);
-}
 
 .contact-icon {
     position: absolute;
@@ -285,10 +290,11 @@ button:focus {
     color: white;
     background-color: #24292e;
 }
+/*endregion*/
 
- /* Tablet and Phone View */
- @media screen  and (max-width: 979px){
-     body {
-         /*background-color: #300;*/
-     }
- }
+/* Tablet and Phone View */
+@media screen  and (max-width: 979px){
+    body {
+        /*background-color: #300;*/
+    }
+}
