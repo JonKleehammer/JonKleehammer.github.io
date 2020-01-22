@@ -17,64 +17,31 @@
     <canvas id="background-canvas"></canvas>
     <div id="tile-container">
         <!--Intro-->
-        <div class="empty-tile" id="intro">
-            <div id="intro-first">
-                <h1 id="intro-text">Hi, I'm Jon Kleehammer</h1>
-            </div>
-            <div id="intro-second">
-                <h1 id="static-text">    I'm passionate about </h1>
-                <h1 id="dynamic-text"
-                    class="typewrite"
-                    data-period="2000"
-                    data-type='["UI/UX design",
-                                "making beautiful websites",
-                                "game design",
-                                "data visualization",
-                                "art",
-                                "efficiency"]'
-                    style="margin-left: 0">
-                </h1>
-                <h1 id="cursor">_</h1>
-            </div>
-        </div>
+        <span id="intro">
+            <h1 id="greetings" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="0">
+                Hi, I'm Jon Kleehammer
+            </h1>
+
+            <span id="dynamic-line" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1000">
+<!--                TODO: Rename these in the morning-->
+                <h1 id="static-start">I'm passionate about </h1>
+                <span id="dynamic-end">
+                    <h1
+                        class="typewrite"
+                        data-period="1000"
+                        data-type='[    "UI/UX design",
+                                        "data visualization",
+                                        "making beautiful websites",
+                                        "efficiency",
+                                        "game design"   ]'>
+                    </h1>
+                    <h1 class="cursor">|</h1>
+                </span>
+            </span>
+        </span>
 
         <!--About Me-->
-        <div class="section-title">
-            <div class="accent-line"></div>
-            <h1>About Me</h1>
-            <div class="accent-line"></div>
-        </div>
-        <div class="tile" id="about-me" data-aos="fade-up">
-                <h3 class="big-p"> Hi everyone!
-                    <br> My name is Jon Kleehammer and I'm a senior at UNT graduating Spring 2020!
-                    <br> I have so many passions, but my greatest include:
-                </h3>
 
-                <h4><u> Data Gathering and Visualization </u></h4>
-                <p>
-                    There's something super satisfying about utilizing the huge amount of data in the world and drawing
-                    conclusions based on charts and graphs that tell a story. Although I don't have many projects that explore this,
-                    it is my ultimate goal to use these skills in industry as a data scientist in the next 3-5 years.
-                </p>
-
-                <h4><u>Game Design and Development</u></h4>
-                <p>
-                    In my free time I'm an avid dungeon master for Dungeons and Dragons and game designer using Unity3D.
-                    <br>
-                    I see game development as a form of self-expression that I do for fun! I don't see myself doing it as a career,
-                    but I really enjoy doing it for myself!
-                </p>
-
-                <h4><u>UI/UX Design</u></h4>
-                <p>
-                    Lastly I love designing user interfaces! I am passionate about creating beautiful websites that are
-                    easy to use and look awesome.
-                    <br>
-                    When I first got to college I was a fine arts major, but I didn't find the work as fulfilling as computer science.
-                    After graduating I may get another bachelor's degree in fine arts or graphic design partly for my own enjoyment
-                    and partly for improving my skills with making beautiful and functional designs!
-                </p>
-        </div>
 <!--        Skills/Enjoyment Section-->
 
 <!--        TODO: Optimize this format at a future time-->
@@ -84,7 +51,7 @@
             <div class="accent-line"></div>
         </div>
 
-        <div class="empty-tile" id="skills">
+        <div id="skills">
                 <div class="half">
                     <img id="personal-pic" src="https://pbs.twimg.com/profile_images/780989542425853952/aIaWqQ-s_400x400.jpg"
                          data-aos="fade-right" data-aos-duration="1000">
@@ -149,7 +116,7 @@
             <h1>Contact Info</h1>
             <div class="accent-line"></div>
         </div>
-        <div class="tile" id="contact" data-aos="fade-up">
+        <div class="tile" id="contact">
             <div class="tile-content">
                 <h2>Thank you for visiting my website!</h2>
 

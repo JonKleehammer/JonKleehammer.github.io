@@ -1,8 +1,9 @@
-body {
+ body {
     font-family: Montserrat,Tahoma, Arial, sans-serif;
 
-    background-color: #212124;
-    margin: 0;
+     margin: 0;
+
+     background-color: #212124;
 
     display: flex;
     flex-direction: column;
@@ -87,22 +88,13 @@ button:focus {
     display: flex;
     flex-direction: row;
     align-items: center;
+    white-space: nowrap;
 }
 
 .accent-line {
     width: 150px;
     height: 4px;
     background-color: white;
-}
-
-.empty-tile {
-    width: 90vw;
-
-    min-height: 100vh;
-
-    display: flex;
-
-    margin-bottom: 100px;
 }
 
 .tile {
@@ -122,38 +114,43 @@ button:focus {
 }
 
 #intro {
-    /*This screen tile will be a little bit different
-    We're gonna have a transparent background and no drop shadow
-    This is going to let the viewers see the background a lot better at first
-    and be more impacted by the greeting*/
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
-    max-width: 75vw;
-
-    color: white;
-
-    padding: 0;
 }
 
-#intro-second {
+
+
+#greetings {
+    margin-left: 5%;
+}
+
+#dynamic-line {
+    margin-left: 10%;
     display: flex;
     flex-direction: row;
-
-    width: 100%;
+    flex-wrap: wrap;
+    white-space: nowrap;
 }
 
-#static-text {
-    align-self: flex-start;
-    white-space: pre;
+#static-start {
+    margin-right: 0;
 }
 
-#dynamic-text {
+#dynamic-end {
+    width: 600px;
 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
-#cursor {
+.cursor {
+    margin-left: 0 ;
     animation: blink 1.5s step-end infinite;
 }
 
@@ -288,3 +285,10 @@ button:focus {
     color: white;
     background-color: #24292e;
 }
+
+ /* Tablet and Phone View */
+ @media screen  and (max-width: 979px){
+     body {
+         /*background-color: #300;*/
+     }
+ }
