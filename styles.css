@@ -192,7 +192,6 @@ button:focus {
     z-index: 0;
 
     overflow: hidden;
-
 }
 
 #about-me-background{
@@ -229,6 +228,7 @@ button:focus {
 
 #personal-pic {
     width: 100%;
+    max-width: 350px;
     height: 100%;
     border-radius: 100%;
 }
@@ -277,6 +277,84 @@ button:focus {
 
 .skill-bar:hover {
     background: linear-gradient(to right, #3b6b8f, #6da2b5);
+}
+/*endregion*/
+
+/*region Overview*/
+#overview {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#overview-divider {
+    background-color: #9be7ff;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    /*centers both horizontally and vertically*/
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+}
+
+.overview-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.overview-corner {
+    margin: 25px;
+    width: 400px;
+    height: 200px;
+
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.overview-left {
+
+}
+
+.overview-right {
+    text-align: right;
+}
+
+.overview-top {
+}
+
+.overview-bottom {
+}
+
+.overview-top.overview-left, .overview-bottom.overview-right {
+    background-color: #242424;
+}
+
+.overview-top.overview-right, .overview-bottom.overview-left {
+    background-color: #363636;
+    z-index: 1;
+}
+
+
+/*endregion*/
+
+/*region Projects*/
+#projects {
+    width: 960px;
+    padding: 72.5px 0 50px 0;
+    border-radius: 10px;
+
+    background-color: #242424;
+
+    text-align: center;
 }
 /*endregion*/
 
