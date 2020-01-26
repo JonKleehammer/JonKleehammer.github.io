@@ -14,23 +14,28 @@ body {
 
 h1 {
     margin: 10px;
+    color: #E5E5E5;
 }
 
 h2 {
     margin: 10px 0;
+    color: #C4C4C4;
 }
 
 h3 {
     font-weight: normal;
+    color: #BDBDBD
 }
 
 h4 {
     font-weight: normal;
+    color: #B0B0B0
 }
 
 p {
     margin: 20px auto;
     width: 90%;
+    color: #ADADAD;
 }
 
 div {
@@ -184,11 +189,14 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+}
 
+.typewrite {
     color: #9be7ff;
 }
 
 #cursor {
+    color: #9be7ff;
     text-align: left;
     margin-left: 0 ;
     animation: blink 1.5s step-end infinite;
@@ -310,7 +318,7 @@ footer {
 }
 
 #overview-divider {
-    background-color: #9be7ff;
+    background-color: #363636;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -360,7 +368,7 @@ footer {
 }
 
 .overview-top.overview-right, .overview-bottom.overview-left {
-    background-color: #363636;
+    background-color: #484848;
     z-index: 1;
 }
 
