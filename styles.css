@@ -53,11 +53,21 @@ a {
 
 button {
     color: white;
+    background-color: #006dda;
+    border: none;
+    border-radius: 5px;
+
+}
+
+button:hover {
+    background-color: #00569b;
 }
 
 button:focus {
     outline: none;
 }
+
+
 /*endregion */
 
 /*region Animations*/
@@ -140,11 +150,11 @@ button:focus {
 }
 
 #greetings {
-    margin-left: 5%;
+    margin-left: 20%;
 }
 
 #dynamic-line {
-    margin-left: 10%;
+    margin-left: 30%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -157,7 +167,7 @@ button:focus {
 }
 
 #dynamic-end {
-    width: 600px;
+    width: 400px;
 
     display: flex;
     flex-direction: row;
@@ -167,6 +177,7 @@ button:focus {
 }
 
 #cursor {
+    text-align: left;
     margin-left: 0 ;
     animation: blink 1.5s step-end infinite;
 }
@@ -204,15 +215,15 @@ button:focus {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #about-me-left {
     margin: 50px;
     padding: 25px;
 
-    width: 400px;
-    max-width: 50%;
-    height: 100%;
+    width: 50%;
+    max-width: 500px;
 
     text-align: center;
 
@@ -223,14 +234,14 @@ button:focus {
 #about-me-right {
     margin: 50px;
     width: 400px;
-    max-width: 50%;
 }
 
 #personal-pic {
     width: 100%;
     max-width: 350px;
-    height: 100%;
+    height: auto;
     border-radius: 100%;
+    margin: 25px;
 }
 
 .skill-table {
@@ -366,16 +377,43 @@ button:focus {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+}
 
-    overflow: hidden;
+#contact-message {
+    width: 960px;
+    margin: 20px;
+    padding: 20px;
 
+    background-color: #363636;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1;
+}
+
+#email-button {
+    align-self: center;
+    margin: 20px;
+    padding: 0 25px;
 }
 
 .contact-list {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+
+    position: sticky;
+    left: 0;
+    bottom: 0;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    background-color: #484848;
 }
 
 .contact-button {
@@ -383,6 +421,8 @@ button:focus {
     width: 100px;
     height: 100px;
     position: relative;
+
+    border-radius: 10px;
 }
 
 
@@ -408,11 +448,13 @@ button:focus {
     color: white;
     background-color: #24292e;
 }
+
+
 /*endregion*/
 
 /* Tablet and Phone View */
 @media screen  and (max-width: 979px){
     body {
-        /*background-color: #300;*/
+        background-color: #300;
     }
 }
