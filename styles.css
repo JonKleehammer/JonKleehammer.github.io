@@ -67,6 +67,10 @@ button:focus {
     outline: none;
 }
 
+i {
+    margin: auto 0;
+}
+
 
 /*endregion */
 
@@ -223,7 +227,7 @@ button:focus {
     padding: 25px;
 
     width: 50%;
-    max-width: 500px;
+    max-width: 450px;
 
     text-align: center;
 
