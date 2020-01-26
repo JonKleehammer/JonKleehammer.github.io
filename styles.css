@@ -96,9 +96,13 @@ button:focus {
 }
 
 .section-title {
-    font-family: Kefa, Tahoma;
+    margin: 0;
+    padding: 10px;
+    background: radial-gradient(circle at bottom, #46a4d7, #4957ba);
+
     text-align: center;
-    font-size: 36pt;
+    font-size: 44pt;
+    font-family: Kefa, Tahoma;
 }
 
 .content-wrapper {
@@ -159,23 +163,21 @@ button:focus {
     }
 }
 
-#about-me {
-    width: 100vw;
-    padding: 50px;
-
-}
-
 /*endregion*/
 
 /*region About Me*/
-#about-me-background{
 
+#about-me {
+    width: 100vw;
+    background-color: black;
+}
+
+#about-me-background{
 }
 
 #about-me-title {
     text-align: center;
     width: auto;
-    background: radial-gradient(circle at bottom, lightseagreen, midnightblue);
 }
 
 #about-me-content {
@@ -188,16 +190,26 @@ button:focus {
 
 #about-me-left {
     margin: 50px;
+
     width: 400px;
+    max-width: 50%;
+    height: 100%;
+
     text-align: center;
+
+    display: table-cell;
+    vertical-align: center;
 }
 
 #about-me-right {
     margin: 50px;
     width: 400px;
+    max-width: 50%;
 }
 
 #personal-pic {
+    width: 100%;
+    height: 100%;
     border-radius: 100%;
 }
 
@@ -251,7 +263,7 @@ button:focus {
 /*region Contact*/
 #contact {
     width: 100vw;
-    background: radial-gradient(circle at bottom, lightseagreen, midnightblue);
+    background-color: white;
 }
 
 .contact-list {
