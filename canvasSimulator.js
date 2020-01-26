@@ -38,7 +38,7 @@ function SetupCanvas () {
 
     //setting up particle array for storing particle data
     screenArea = (style_width * style_height) / dpi;
-    particleNum = Math.floor(screenArea / 2000);
+    particleNum = Math.floor(screenArea / 5000);
 }
 
 // When we extend or shrink the canvas we need to redo the particles rather than keeping them

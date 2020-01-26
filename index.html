@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Jon Kleehammer</title>
+    <title>Jon Kleehammer | Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
     <script src="typewriter.js"></script>
 
 <!--    External Resources-->
+<!--    animate on scroll-->
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
@@ -17,42 +18,45 @@
     <canvas id="background-canvas"></canvas>
     <div id="page-wrapper">
         <!--Intro-->
-        <span id="intro">
-            <h1 id="greetings" data-aos="fade-in" data-aos-duration="1000">
-                Hi, I'm Jon Kleehammer
-            </h1>
+        <div id="intro">
 
-            <span id="dynamic-line" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1000">
-<!--                TODO: Rename these in the morning-->
-                <h1 id="static-start">I'm passionate about </h1>
-                <span id="dynamic-end">
-                    <h1
-                        class="typewrite"
-                        data-period="1000"
-                        data-type='[    "UI/UX design",
-                                        "data visualization",
-                                        "making beautiful websites",
-                                        "efficiency",
-                                        "game design"   ]'>
-                    </h1>
-                    <h1 class="cursor">|</h1>
+            <div id="intro-text">
+                <h1 id="greetings" data-aos="fade-in" data-aos-duration="1000">
+                    Hi, I'm Jon Kleehammer
+                </h1>
+
+                <span id="dynamic-line" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1000">
+                    <h2 id="static-start">I'm passionate about </h2>
+                    <span id="dynamic-end">
+                        <h2
+                                class="typewrite"
+                                data-period="1000"
+                                data-type='[    "UI/UX design",
+                                            "data visualization",
+                                            "making beautiful websites",
+                                            "efficiency",
+                                            "game design"   ]'>
+                        </h2>
+                        <h2 id="cursor">|</h2>
+                    </span>
                 </span>
-            </span>
-        </span>
+            </div>
+        </div>
 <!-- About Me -> Titled: Who am I? -->
+        <h1 class="section-title" id="about-me-title">Who am I?</h1>
         <div id="about-me">
             <div id="about-me-background"></div>
-<!--            <div class="section-title"><h1 id="about-me-title">Who am I?</h1></div>-->
-            <h1 class="section-title" id="about-me-title">Who am I?</h1>
-
 
             <div id="about-me-content">
                 <div id="about-me-left">
                     <img id="personal-pic" src="https://pbs.twimg.com/profile_images/780989542425853952/aIaWqQ-s_400x400.jpg"
                          data-aos="fade-right" data-aos-duration="1000">
-                    <h1 data-aos="fade-right" data-aos-duration="1000">
-                        I love data visualization, UI/UX design, and game design
-                    </h1>
+                    <h2 data-aos="fade-right" data-aos-duration="1000">
+                        Software Engineer based in Fort Worth, TX
+                    </h2>
+                    <h3>
+                        Computer Science senior at UNT graduating Spring 2020.
+                    </h3>
             </div>
                 <div id="about-me-right">
                     <div class="skill-table" data-aos="fade-left" data-aos-duration="1000">
@@ -106,47 +110,66 @@
 
         </div>
 
+<!-- Skills: (elaboration) What I do-->
+        <h1 class="section-title" id="skills">What I do</h1>
+        <div id="overview-container">
+            <div class="overview-row">
+                <div class="overview-corner">
+
+                </div>
+                <div class="overview-corner">
+
+                </div>
+            </div>
+            <div class="overview-row">
+                <div class="overview-corner">
+
+                </div>
+                <div class="overview-corner">
+
+                </div>
+            </div>
+        </div>
+
 <!--        Contact Me!-->
+        <h1 id="contact-title" class="section-title">Contact Me</h1>
         <div id="contact">
 
-            <h1 id="contact-title" class="section-title">Contact Me</h1>
+            <span><h2 style="text-align: center">Thank you for visiting my website!</h2></span>
 
-            <div class="content-wrapper">
-                <h2>Thank you for visiting my website!</h2>
-
-                <p>
+            <span><p>
                     I'm still working on this website, so I apologize for not being able to provide you with the
                     full experience yet! I'm far away from being happy with the website, but I thought I'd offer a
                     sneak peak at my work in progress! Check back in the future to see my updates!
-                </p>
+            </p></span>
 
-                <p>
-                    You can also contact me with any questions, comments, and concerns about me or the website using the
-                    contact information below.
-                </p>
+            <span><p>
+                You can also contact me with any questions, comments, and concerns about me or the website using the
+                contact information below.
+            </p></span>
 
-                <h2 style="text-align: center">Jon.Kleehammer@gmail.com</h2>
 
-                <div class="contact-list">
-                    <a target="_blank" href="https://twitter.com/JonKleehammer/">
-                        <div id="twitter-button" class="contact-button zoom">
-                            <i class="fa fa-twitter fa-5x contact-icon"></i>
-                        </div>
-                    </a>
+            <h2 style="text-align: center">Jon.Kleehammer@gmail.com</h2>
 
-                    <a target="_blank" href="https://www.linkedin.com/in/jonathan-kleehammer-225725149/">
-                        <div id="linkedin-button" class="contact-button zoom">
-                            <i class="fa fa-linkedin fa-5x contact-icon"></i>
-                        </div>
-                    </a>
+            <div class="contact-list">
+                <a target="_blank" href="https://twitter.com/JonKleehammer/">
+                    <div id="twitter-button" class="contact-button zoom">
+                        <i class="fa fa-twitter fa-5x contact-icon"></i>
+                    </div>
+                </a>
 
-                    <a target="_blank" href="https://github.com/JonKleehammer/">
-                        <div id="github-button" class="contact-button zoom">
-                            <i class="fa fa-github fa-5x contact-icon"></i>
-                        </div>
-                    </a>
+                <a target="_blank" href="https://www.linkedin.com/in/jonathan-kleehammer-225725149/">
+                    <div id="linkedin-button" class="contact-button zoom">
+                        <i class="fa fa-linkedin fa-5x contact-icon"></i>
+                    </div>
+                </a>
 
-                </div>
+                <a target="_blank" href="https://github.com/JonKleehammer/">
+                    <div id="github-button" class="contact-button zoom">
+                        <i class="fa fa-github fa-5x contact-icon"></i>
+                    </div>
+                </a>
+
             </div>
         </div>
     </div>

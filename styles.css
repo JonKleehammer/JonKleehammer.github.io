@@ -4,16 +4,15 @@ body {
 
      margin: 0;
 
-     background-color: #212124;
+     background-color: #121212;
 
     display: flex;
     flex-direction: column;
 
-    color: #240c2f;
+    color: white;
 }
 
 h1 {
-    color: white;
     margin: 10px;
 }
 
@@ -97,12 +96,20 @@ button:focus {
 
 .section-title {
     margin: 0;
-    padding: 10px;
-    background: radial-gradient(circle at bottom, #46a4d7, #4957ba);
+    padding: 10px 45px;
+    /*background: radial-gradient(circle at bottom, #46a4d7, #4957ba);*/
+    background-color: #484848;
 
     text-align: center;
     font-size: 44pt;
     font-family: Kefa, Tahoma;
+
+    align-self: center;
+    z-index: 10;
+    position: relative;
+    top: 45px;
+
+    border-radius: 10px;
 }
 
 .content-wrapper {
@@ -120,10 +127,17 @@ button:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+
+    overflow: hidden;
 }
 
+#intro-text{
+    width: 100vw;
+    height: auto;
+    padding: 20px 0;
+    background-color: #242424;
 
+}
 
 #greetings {
     margin-left: 5%;
@@ -139,6 +153,7 @@ button:focus {
 
 #static-start {
     margin-right: 0;
+    white-space: pre;
 }
 
 #dynamic-end {
@@ -147,19 +162,21 @@ button:focus {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+
+    color: #9be7ff;
 }
 
-.cursor {
+#cursor {
     margin-left: 0 ;
     animation: blink 1.5s step-end infinite;
 }
 
 @keyframes blink {
     from, to {
-        color: transparent
+        opacity: 0;
     }
     50% {
-        color: white;
+        opacity: 1;
     }
 }
 
@@ -169,16 +186,18 @@ button:focus {
 
 #about-me {
     width: 100vw;
-    background-color: black;
+    padding: 50px 0;
+    background-color: #242424;
+    position: relative;
+    z-index: 0;
+
+    overflow: hidden;
+
 }
 
 #about-me-background{
 }
 
-#about-me-title {
-    text-align: center;
-    width: auto;
-}
 
 #about-me-content {
     padding: 50px;
@@ -190,6 +209,7 @@ button:focus {
 
 #about-me-left {
     margin: 50px;
+    padding: 25px;
 
     width: 400px;
     max-width: 50%;
@@ -197,8 +217,8 @@ button:focus {
 
     text-align: center;
 
-    display: table-cell;
-    vertical-align: center;
+    background-color: #363636;
+    border-radius: 20px;
 }
 
 #about-me-right {
@@ -221,7 +241,7 @@ button:focus {
     flex-direction: column;
     justify-content: space-evenly;
 
-    background-color: #EEF;
+    background-color: #363636;
     border-radius: 5px;
     padding: 20px;
 }
@@ -233,7 +253,7 @@ button:focus {
 .skill-bar {
     border-radius: 5px;
 
-    background: linear-gradient(to right, #7978ff, #9faaee);
+    background: linear-gradient(to right, #4180a7, #9be7ff);
 
     display: flex;
     align-items: center;
@@ -251,19 +271,27 @@ button:focus {
 }
 
 .skill-bar-title {
-    margin: 5px;
+    margin: 5px 5px 5px 10px;
     font-size: 12pt;
 }
 
 .skill-bar:hover {
-    background: linear-gradient(to right, #7a90ff, #9fb8ed);
+    background: linear-gradient(to right, #3b6b8f, #6da2b5);
 }
 /*endregion*/
 
 /*region Contact*/
 #contact {
+    padding: 50px 0;
     width: 100vw;
-    background-color: white;
+    background-color: #242424;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+
 }
 
 .contact-list {
